@@ -24,8 +24,9 @@ p.time  {
 
 .cage.item {
 	background-color: black;
-	border-top-color: #EA4646;
-	border-top-width: thick;
+	border-top-width: 0px;
+	border-bottom-color: #EA4646;
+	border-bottom-width: thick;
 }
 
 .number-rating {
