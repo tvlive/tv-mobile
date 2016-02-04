@@ -1,0 +1,38 @@
+/* Empty. Add your own CSS if you like */
+.item p {
+	text-align: center;
+	font-size: small;
+	color: white;
+}
+
+p.time  {
+	text-align: center;
+	font-size: x-small;
+}
+
+.tabs {
+	background-color: #f8f8f8;
+	color: #EA4646;
+}
+.bar.bar-stable{
+	background-color: #EA4646;
+}
+
+.bar.bar-stable .title {
+    color: #fafafa;
+}
+
+.cage.item {
+	background-color: black;
+	border-top-color: #EA4646;
+	border-top-width: thick;
+}
+
+.number-rating {
+	color: white;
+}
+
+
+.star-rating {
+	color: #ffc900;
+}
