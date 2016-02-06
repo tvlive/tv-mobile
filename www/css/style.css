@@ -37,3 +37,33 @@ p.time  {
 .star-rating {
 	color: #ffc900;
 }
+
+.button.button.now {
+	background-color: #EA4646;
+	border-color: #EA4646;
+	color: white;
+	font-size: medium;
+}
+
+.button.button.next {
+	background-color: black;
+	border-color: #EA4646;
+	color: white;
+	font-size: medium;
+}
+
+.search-bar
+{
+	width:50% !important;
+	background: inherit;
+	/*height: inherit !important;*/
+}
+
+.bar .bar-black{
+	background-color: black;
+}
+
+.bar-header.black-header {
+	background-color: black !important;
+	
+}
