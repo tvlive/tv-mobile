@@ -65,5 +65,7 @@ p.time  {
 
 .bar-header.black-header {
 	background-color: black !important;
-	
+	border-bottom-width: 10px !important;
+	border-bottom: dotted !important;
+	background-size: 0px !important;
 }
