@@ -45,18 +45,17 @@ p.time  {
 	font-size: medium;
 }
 
-.button.button.next {
-	background-color: black;
-	border-color: #EA4646;
-	color: white;
-	font-size: medium;
-}
+/*.button.button.next {*/
+	/*background-color: black;*/
+	/*border-color: #EA4646;*/
+	/*color: white;*/
+	/*font-size: medium;*/
+/*}*/
 
 .search-bar
 {
-	width:50% !important;
+	width:100% !important;
 	background: inherit;
-	/*height: inherit !important;*/
 }
 
 .bar .bar-black{
