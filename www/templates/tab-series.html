@@ -42,7 +42,9 @@
                                     <div class="item item-image">
                                         <img ng-src="{{chat.channelImageURL}}">
                                     </div>
-                                    <progress max="100" value="{{chat.perCentTimeElapsed}}"></progress>
+                                    <div ng-show="chat.onTimeNow">
+                                        <progress max="100" value="{{chat.perCentTimeElapsed}}"></progress>
+                                    </div>
                                     <p class="time">{{chat.st}} - {{chat.et}}</p>
                                 </div>
                             </div>
@@ -69,7 +71,9 @@
                                     <div class="item item-image">
                                         <img ng-src="{{chat.channelImageURL}}">
                                     </div>
-                                    <progress max="100" value="{{chat.perCentTimeElapsed}}"></progress>
+                                    <div ng-show="chat.onTimeNow">
+                                        <progress max="100" value="{{chat.perCentTimeElapsed}}"></progress>
+                                    </div>
                                     <p class="time">{{chat.st}} - {{chat.et}}</p>
                                 </div>
                             </div>
