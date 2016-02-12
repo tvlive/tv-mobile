@@ -1,18 +1,30 @@
 angular.module('starter.controllers', [])
 
+    .controller('SeriesCtrl', function ($scope, $state, Friends) {
 
-    .controller('SeriesCtrl', function ($scope, $stateParams, Friends) {
+        $scope.series_now = true;
+
+        $scope.toDetails = function (item) {
+            $state.go('series-details', {itemLink: item.uriTVContentDetails});
+        }
 
         $scope.showNext = function () {
-            Friends.seriesNext(function (data) {
-                $scope.series = transform_content(data);
-            })
+            if ($scope.series_now) {
+                $scope.series_now = false;
+                Friends.seriesNext(function (data) {
+                    $scope.series = transform_content(data);
+                })
+            }
+
         }
 
         $scope.showNow = function () {
-            Friends.series(function (data) {
-                $scope.series = transform_content(data);
-            })
+            if (!$scope.series_now) {
+                $scope.series_now = true;
+                Friends.series(function (data) {
+                    $scope.series = transform_content(data);
+                })
+            }
         }
 
         Friends.series(function (data) {
@@ -20,21 +32,57 @@ angular.module('starter.controllers', [])
         })
     })
 
-    .controller('MoviesCtrl', function ($scope, $stateParams, Friends) {
+    .controller('MoviesCtrl', function ($scope, $state, Friends) {
+        $scope.movies_now = true;
+
+        $scope.toDetails = function (item) {
+            $state.go('movies-details', {itemLink: item.uriTVContentDetails});
+        }
 
         $scope.showNext = function () {
-            Friends.moviesNext(function (data) {
-                $scope.movies = transform_content(data);
-            })
+            if ($scope.movies_now) {
+                $scope.movies_now = false;
+                Friends.moviesNext(function (data) {
+                    $scope.movies = transform_content(data);
+                })
+            }
+
         }
 
         $scope.showNow = function () {
-            Friends.movies(function (data) {
-                $scope.movies = transform_content(data);
-            })
+            if (!$scope.movies_now) {
+                $scope.movies_now = true;
+                Friends.movies(function (data) {
+                    $scope.movies = transform_content(data);
+                })
+            }
         }
 
         Friends.movies(function (data) {
             $scope.movies = transform_content(data);
+        })
+    })
+
+    .controller('SeriesDetailsCtrl', function ($scope, $ionicHistory, $stateParams, Friends) {
+
+        $scope.goBack = function () {
+            $ionicHistory.goBack();
+        }
+
+        Friends.details($stateParams.itemLink, function (data) {
+            $scope.details = transform_date_details(data);
+            console.debug($scope.details);
+        })
+    })
+
+    .controller('MoviesDetailsCtrl', function ($scope, $ionicHistory, $stateParams, Friends) {
+
+        $scope.goBack = function () {
+            $ionicHistory.goBack();
+        }
+
+        Friends.details($stateParams.itemLink, function (data) {
+            $scope.details = transform_date_details(data);
+            console.debug($scope.details);
         })
     });

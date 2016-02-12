@@ -16,14 +16,16 @@ angular.module('starter.services', [])
       }).success(success_callback);      
       // return content_now;
       },
+
     moviesNext: function (success_callback) {
-      $http.get('http://api.tvlive.io/tvcontent/film/FREEVIEW/left',
+      $http.get('http://api.tvlive.io/tvcontent/film/FREEVIEW/next',
           {
             headers: {'Authorization': 'YWx2YXJvLnZpbGFwbGFuYUBnbWFpbC5jb206NTZhZTdhMjIyYzAwMDAyYzAwMmMzZTBm'
             }
           }).success(success_callback);
       // return content_now;
     },
+
     series:  function (success_callback) {
       $http.get('http://api.tvlive.io/tvcontent/series/FREEVIEW/current',
         {
@@ -32,8 +34,17 @@ angular.module('starter.services', [])
       }).success(success_callback);      
       // return content_now;
       },
+
     seriesNext:  function (success_callback) {
-      $http.get('http://api.tvlive.io/tvcontent/series/FREEVIEW/left',
+      $http.get('http://api.tvlive.io/tvcontent/series/FREEVIEW/next',
+          {
+            headers: {'Authorization': 'YWx2YXJvLnZpbGFwbGFuYUBnbWFpbC5jb206NTZhZTdhMjIyYzAwMDAyYzAwMmMzZTBm'
+            }
+          }).success(success_callback);
+      // return content_now;
+    },
+    details:  function (url, success_callback) {
+      $http.get(url,
           {
             headers: {'Authorization': 'YWx2YXJvLnZpbGFwbGFuYUBnbWFpbC5jb206NTZhZTdhMjIyYzAwMDAyYzAwMmMzZTBm'
             }
