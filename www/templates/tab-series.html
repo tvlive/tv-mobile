@@ -1,9 +1,9 @@
 <ion-view hide-nav-bar="true">
     <ion-header-bar class="black-header">
-        <button class="button button-clear search-bar now" ng-click="showNow()">
+        <button class="button search-bar" ng-class="{ now: series_now, next: !series_now }" ng-click="showNow()">
             Now showing
         </button>
-        <button class="button button-clear search-bar next" ng-click="showNext()">
+        <button class="button search-bar" ng-class="{ next: series_now, now: !series_now }" ng-click="showNext()">
             What's next
         </button>
     </ion-header-bar>
