@@ -35,7 +35,7 @@ angular.module('starter.controllers', [])
         $scope.showNext = function () {
             if ($scope.movies_now) {
                 $scope.movies_now = false;
-                Friends.seriesNext(function (data) {
+                Friends.moviesNext(function (data) {
                     $scope.movies = transform_content(data);
                 })
             }
@@ -45,7 +45,7 @@ angular.module('starter.controllers', [])
         $scope.showNow = function () {
             if (!$scope.movies_now) {
                 $scope.movies_now = true
-                Friends.series(function (data) {
+                Friends.movies(function (data) {
                     $scope.movies = transform_content(data);
                 })
             }
