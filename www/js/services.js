@@ -39,6 +39,14 @@ angular.module('starter.services', [])
             }
           }).success(success_callback);
       // return content_now;
+    },
+    seriesDetails:  function (url, success_callback) {
+      $http.get(url,
+          {
+            headers: {'Authorization': 'YWx2YXJvLnZpbGFwbGFuYUBnbWFpbC5jb206NTZhZTdhMjIyYzAwMDAyYzAwMmMzZTBm'
+            }
+          }).success(success_callback);
+      // return content_now;
     }
           
   }

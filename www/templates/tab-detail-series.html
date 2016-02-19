@@ -1,0 +1,110 @@
+<ion-view hide-nav-bar="false" hide-back-button="false">
+    <ion-nav-view>
+        <ion-nav-back-button class="button-clear">
+            <i class="ion-arrow-left-c"></i> Back
+        </ion-nav-back-button>
+    </ion-nav-view>
+    <ion-content class="test-details">
+        <div class="row">
+            <div class="col col-100">
+                <div class="content-title">
+                    <p>{{details.series.serieTitle}}</p>
+
+                    <p>Episode {{details.series.episode.episodeNumber}}<span
+                            ng-show="details.series.episode.episodeTitle">: {{details.series.episode.episodeTitle}}</span>
+                    </p>
+
+                    <p>Season {{details.series.episode.seasonNumber}}</p>
+                </div>
+            </div>
+        </div>
+        <div ng-show="details.series.poster">
+            <div class="row">
+                <div class="col col-20"></div>
+                <div class="col col-60">
+                    <div class="item item-image">
+                        <img ng-src="{{details.series.poster}}">
+                    </div>
+                    <div ng-show="details.rating">
+                        <i class="star-rating icon ion-star item-icon-left"></i><span class="number-rating">{{details.rating}}</span>
+                    </div>
+                </div>
+                <div class="col col-20"></div>
+                <!--<div class="col col-70">-->
+                    <!--<div class="row">-->
+                        <!--<div class="col col-100">-->
+                            <!--<div>-->
+                                <!--<p>{{details.series.plot}}</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            </div>
+        </div>
+
+        <div>
+            <div class="row">
+                <div class="col col-100">
+                    <p class="black-content">{{details.series.episode.episodePlot}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-100">
+                    <p class="black-content">{{details.series.genre}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-100">
+                    <p class="black-content">{{details.series.actors}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-100">
+                    <p class="black-content">{{details.series.director}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-100">
+                    <p class="black-content">{{details.series.awards}}</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col col-100">
+                    <p class="black-content">{{details.series.year}}</p>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <!--<div ng-show="details.noPoster">-->
+        <!--<div class="row">-->
+        <!--<div class="col col-30">-->
+        <!--<div class="item item-image">-->
+        <!--<img ng-src="{{details.image}}">-->
+        <!--</div>-->
+        <!--<div ng-show="details.rating">-->
+        <!--<i class="star-rating icon ion-star item-icon-left"></i><span class="number-rating">{{details.rating}}</span>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="col col-70">-->
+        <!--<div class="row">-->
+        <!--<div class="col col-20">-->
+        <!--</div>-->
+        <!--<div class="col col-80">-->
+        <!--<div class="item item-image">-->
+        <!--<img ng-src="{{details.channelImageURL}}">-->
+        <!--</div>-->
+        <!--<div ng-show="details.onTimeNow">-->
+        <!--<progress max="100" value="{{details.perCentTimeElapsed}}"></progress>-->
+        <!--</div>-->
+        <!--<p class="time">{{details.st}} - {{details.et}}</p>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>    -->
+    </ion-content>
+</ion-view>

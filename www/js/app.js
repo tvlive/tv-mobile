@@ -50,7 +50,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         });
     })
 
-    .config(['$ionicConfigProvider', function($ionicConfigProvider) {
+    .config(['$ionicConfigProvider', function ($ionicConfigProvider) {
 
         $ionicConfigProvider.tabs.position('bottom'); // other values: top
 
@@ -90,6 +90,13 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
                         controller: 'MoviesCtrl'
                     }
                 }
+            })
+
+            .state('details', {
+                url: '/details',
+                params: { itemLink : null },
+                templateUrl: 'templates/tab-detail-series.html',
+                controller: 'DetailsCtrl'
             });
 
         // if none of the above states are matched, use this as the fallback

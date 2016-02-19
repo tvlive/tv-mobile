@@ -68,3 +68,37 @@ p.time  {
 	border-bottom: dotted !important;
 	background-size: 0px !important;
 }
+
+.test-details {
+	background-color: black;
+	border-top-width: 0px;
+	border-bottom-color: #EA4646;
+	border-bottom-width: thick;
+	color: white;
+	font-size: x-small;
+}
+
+div.content-title {
+	text-align: center;
+	font-size: small;
+	color: white;
+}
+
+p.red-content{
+	font-size: small;
+	background-color: #EA4646;
+	border-color: #EA4646;
+	color: white;
+}
+
+
+p.black-content{
+	font-size: small;
+	background-color: black;
+	border-color: #EA4646; !important;
+	border-top-width: 1px; !important;
+	border-style: solid; !important;
+
+	color: white;
+
+}
