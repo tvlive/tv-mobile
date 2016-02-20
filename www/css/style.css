@@ -75,7 +75,7 @@ p.time  {
 	border-bottom-color: #EA4646;
 	border-bottom-width: thick;
 	color: white;
-	font-size: x-small;
+	font-size: small;
 }
 
 div.content-title {
@@ -84,21 +84,26 @@ div.content-title {
 	color: white;
 }
 
-p.red-content{
-	font-size: small;
+p.black-content{
 	background-color: #EA4646;
 	border-color: #EA4646;
 	color: white;
+	font-size: small;
+	text-align: center;
 }
 
-
-p.black-content{
-	font-size: small;
-	background-color: black;
-	border-color: #EA4646; !important;
-	border-top-width: 1px; !important;
-	border-style: solid; !important;
-
+.number-rating-details {
+	font-size: medium;
 	color: white;
+}
+
+span.array-element {
+	border-left: solid;
+	border-left-width: 1px;
+	border-right: solid;
+	border-right-width: 1px;
+	border-color: #EA4646;
+	padding-left: 5px;
+	padding-right: 5px;
 
 }

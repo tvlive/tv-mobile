@@ -8,7 +8,8 @@
         <div class="row">
             <div class="col col-100">
                 <div class="content-title">
-                    <p>{{details.series.serieTitle}}</p>
+                    <p>{{details.series.serieTitle}} <span
+                            ng-show="details.series.year">({{details.series.year}})</span></p>
 
                     <p>Episode {{details.series.episode.episodeNumber}}<span
                             ng-show="details.series.episode.episodeTitle">: {{details.series.episode.episodeTitle}}</span>
@@ -26,85 +27,75 @@
                         <img ng-src="{{details.series.poster}}">
                     </div>
                     <div ng-show="details.rating">
-                        <i class="star-rating icon ion-star item-icon-left"></i><span class="number-rating">{{details.rating}}</span>
+                        <i class="star-rating icon ion-star item-icon-left"></i><span class="number-rating-details">{{details.rating}}</span>
                     </div>
                 </div>
                 <div class="col col-20"></div>
                 <!--<div class="col col-70">-->
-                    <!--<div class="row">-->
-                        <!--<div class="col col-100">-->
-                            <!--<div>-->
-                                <!--<p>{{details.series.plot}}</p>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
+                <!--<div class="row">-->
+                <!--<div class="col col-100">-->
+                <!--<div>-->
+                <!--<p>{{details.series.plot}}</p>-->
+                <!--</div>-->
+                <!--</div>-->
+                <!--</div>-->
                 <!--</div>-->
             </div>
         </div>
 
         <div>
-            <div class="row">
+            <div class="row" ng-show="details.series.episode.episodePlot">
                 <div class="col col-100">
-                    <p class="black-content">{{details.series.episode.episodePlot}}</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col col-100">
-                    <p class="black-content">{{details.series.genre}}</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col col-100">
-                    <p class="black-content">{{details.series.actors}}</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col col-100">
-                    <p class="black-content">{{details.series.director}}</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col col-100">
-                    <p class="black-content">{{details.series.awards}}</p>
-                </div>
-            </div>
+                    <p class="black-content">Episode Plot</p>
 
-            <div class="row">
-                <div class="col col-100">
-                    <p class="black-content">{{details.series.year}}</p>
+                    <p>{{details.series.episode.episodePlot}}</p>
                 </div>
             </div>
+            <div class="row" ng-show="details.series.genre.length">
+                <div class="col col-100">
+                    <p class="black-content">Categories</p>
 
+                    <p><span class="array-element" ng-repeat="genre in details.series.genre">
+                        {{genre}}
+                    </span>
+                    </p>
+                </div>
+            </div>
+            <div class="row" ng-show="details.series.actors.length">
+                <div class="col col-100">
+                    <p class="black-content">Cast</p>
+
+                    <p><span class="array-element" ng-repeat="actor in details.series.actors">
+                        {{actor}}
+                    </span>
+                    </p>
+                </div>
+
+            </div>
+            <div class="row" ng-show="details.series.director.length">
+                <div class="col col-100">
+                    <p class="black-content">Director</p>
+
+                    <p><span class="array-element" ng-repeat="director in details.series.director">
+                        {{director}}
+                    </span>
+                    </p>
+                </div>
+            </div>
+            <div class="row" ng-show="details.series.language">
+                <div class="col col-100">
+                    <p class="black-content">Language</p>
+
+                    <p>{{details.series.language}}</p>
+                </div>
+            </div>
+            <div class="row" ng-show="details.series.awards">
+                <div class="col col-100">
+                    <p class="black-content">Awards</p>
+
+                    <p>{{details.series.awards}}</p>
+                </div>
+            </div>
         </div>
-
-
-
-        <!--<div ng-show="details.noPoster">-->
-        <!--<div class="row">-->
-        <!--<div class="col col-30">-->
-        <!--<div class="item item-image">-->
-        <!--<img ng-src="{{details.image}}">-->
-        <!--</div>-->
-        <!--<div ng-show="details.rating">-->
-        <!--<i class="star-rating icon ion-star item-icon-left"></i><span class="number-rating">{{details.rating}}</span>-->
-        <!--</div>-->
-        <!--</div>-->
-        <!--<div class="col col-70">-->
-        <!--<div class="row">-->
-        <!--<div class="col col-20">-->
-        <!--</div>-->
-        <!--<div class="col col-80">-->
-        <!--<div class="item item-image">-->
-        <!--<img ng-src="{{details.channelImageURL}}">-->
-        <!--</div>-->
-        <!--<div ng-show="details.onTimeNow">-->
-        <!--<progress max="100" value="{{details.perCentTimeElapsed}}"></progress>-->
-        <!--</div>-->
-        <!--<p class="time">{{details.st}} - {{details.et}}</p>-->
-        <!--</div>-->
-        <!--</div>-->
-        <!--</div>-->
-        <!--</div>-->
-        <!--</div>    -->
     </ion-content>
 </ion-view>
