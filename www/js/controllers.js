@@ -5,7 +5,7 @@ angular.module('starter.controllers', [])
         $scope.series_now = true;
 
         $scope.toDetails = function (item) {
-            $state.go('details', {itemLink: item.uriTVContentDetails});
+            $state.go('series-details', {itemLink: item.uriTVContentDetails});
         }
 
         $scope.showNext = function () {
@@ -32,8 +32,12 @@ angular.module('starter.controllers', [])
         })
     })
 
-    .controller('MoviesCtrl', function ($scope, $stateParams, Friends) {
+    .controller('MoviesCtrl', function ($scope, $state, Friends) {
         $scope.movies_now = true;
+
+        $scope.toDetails = function (item) {
+            $state.go('movies-details', {itemLink: item.uriTVContentDetails});
+        }
 
         $scope.showNext = function () {
             if ($scope.movies_now) {
@@ -59,37 +63,26 @@ angular.module('starter.controllers', [])
         })
     })
 
-    .controller('DetailsCtrl', function ($scope, $stateParams, Friends) {
-        Friends.seriesDetails($stateParams.itemLink, function (data) {
+    .controller('SeriesDetailsCtrl', function ($scope, $ionicHistory, $stateParams, Friends) {
+
+        $scope.goBack = function () {
+            $ionicHistory.goBack();
+        }
+
+        Friends.details($stateParams.itemLink, function (data) {
             $scope.details = transform_date_details(data);
             console.debug($scope.details);
         })
-        //$scope.details = {
-        //    et: '22:55',
-        //    st: '21:55',
-        //    channel: "RADIO 4 EXTRA",
-        //    channelImageURL: 'http://api.tvlive.io/RADIO_4_EXTRA.png',
-        //    rating: 8.3,
-        //    series: {
-        //        episode: {
-        //            episodeNumber: '4',
-        //            episodePlot: 'Martin has a sporting challenge, while Charles attempts to save a disgraced minister. Comedy by Mark Tavener, with Stephen Fry and John Bird. First aired in 2002',
-        //            seasonNumber: '3',
-        //            totalNumber: '5',
-        //            episodeTitle: 'Some title'
-        //        },
-        //        actors: 'Stephen Fry, John Bird, James Lance',
-        //        director: 'Stephen Fry',
-        //        genre: 'drama, thriller',
-        //        serieTitle: 'Absolute Power',
-        //        plot: 'The inner workings of a successful PR firm - lying for a living.',
-        //        year: '2013',
-        //        awards: 'One oscar and 2 golden globes',
-        //        poster: 'http://api.tvlive.io/images/tt0874608'
-        //    },
-        //    onTimeNow: true,
-        //    perCentTimeElapsed: 60
-        //
-        //}
+    })
 
+    .controller('MoviesDetailsCtrl', function ($scope, $ionicHistory, $stateParams, Friends) {
+
+        $scope.goBack = function () {
+            $ionicHistory.goBack();
+        }
+
+        Friends.details($stateParams.itemLink, function (data) {
+            $scope.details = transform_date_details(data);
+            console.debug($scope.details);
+        })
     });

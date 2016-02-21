@@ -92,11 +92,18 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
                 }
             })
 
-            .state('details', {
-                url: '/details',
-                params: { itemLink : null },
+            .state('series-details', {
+                url: '/series-details',
+                params: {itemLink: null},
                 templateUrl: 'templates/tab-detail-series.html',
-                controller: 'DetailsCtrl'
+                controller: 'SeriesDetailsCtrl'
+            })
+
+            .state('movies-details', {
+                url: '/movies-details',
+                params: {itemLink: null},
+                templateUrl: 'templates/tab-detail-movies.html',
+                controller: 'MoviesDetailsCtrl'
             });
 
         // if none of the above states are matched, use this as the fallback
