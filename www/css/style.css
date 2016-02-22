@@ -117,3 +117,7 @@ span.array-element {
 	/*border-color: #EA4646;*/
 	color: white;
 }
+
+p.details-elemnts {
+	margin: 0px;
+}

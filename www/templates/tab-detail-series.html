@@ -11,13 +11,13 @@
         <div class="row">
             <div class="col col-100">
                 <div class="content-title">
-                    <p>{{details.series.serieTitle}} <span
+                    <p class="details-elemnts">{{details.series.serieTitle}} <span
                             ng-show="details.series.year">({{details.series.year}})</span></p>
 
-                    <p>Episode {{details.series.episode.episodeNumber}}<span
+                    <p class="details-elemnts">Episode {{details.series.episode.episodeNumber}}<span
                             ng-show="details.series.episode.episodeTitle">: {{details.series.episode.episodeTitle}}</span>
                     </p>
-                    <p>Season {{details.series.episode.seasonNumber}}</p>
+                    <p class="details-elemnts">Season {{details.series.episode.seasonNumber}}</p>
                     <div class="rating" ng-show="details.rating">
                         <i class="star-rating icon ion-star"></i><span class="number-rating">{{details.rating}}</span>
                     </div>
