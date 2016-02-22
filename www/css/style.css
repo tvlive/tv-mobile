@@ -26,10 +26,13 @@ p.time  {
 	border-bottom-width: thick;
 }
 
+.rating {
+	text-align: center;
+}
 .number-rating {
 	color: white;
+	font-size: small;
 }
-
 
 .star-rating {
 	color: #ffc900;

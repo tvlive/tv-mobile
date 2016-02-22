@@ -1,9 +1,9 @@
 <ion-view>
     <ion-nav-buttons side="left">
         <!--<button class="button back-button buttons button-clear header-item" ng-click="goBack()">-->
-            <!--<i class="icon ion-ios-arrow-back"> Back</i>-->
+        <!--<i class="icon ion-ios-arrow-back"> Back</i>-->
         <!--</button>-->
-        <button class="button back-button-details next"  ng-click="goBack()">
+        <button class="button back-button-details next" ng-click="goBack()">
             <i class="icon ion-ios-arrow-back">Back</i>
         </button>
     </ion-nav-buttons>
@@ -17,8 +17,11 @@
                     <p>Episode {{details.series.episode.episodeNumber}}<span
                             ng-show="details.series.episode.episodeTitle">: {{details.series.episode.episodeTitle}}</span>
                     </p>
-
                     <p>Season {{details.series.episode.seasonNumber}}</p>
+                    <div class="rating" ng-show="details.rating">
+                        <i class="star-rating icon ion-star"></i><span class="number-rating">{{details.rating}}</span>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -28,9 +31,6 @@
                 <div class="col col-60">
                     <div class="item item-image">
                         <img ng-src="{{details.series.poster}}">
-                    </div>
-                    <div ng-show="details.rating">
-                        <i class="star-rating icon ion-star item-icon-left"></i><span class="number-rating-details">{{details.rating}}</span>
                     </div>
                 </div>
                 <div class="col col-20"></div>
