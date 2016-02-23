@@ -70,7 +70,9 @@ angular.module('starter.controllers', [])
         }
 
         Friends.details($stateParams.itemLink, function (data) {
+            $scope.isDetailsSeriesAvailable = false;
             $scope.details = transform_date_details(data);
+            $scope.isDetailsSeriesAvailable = true;
             console.debug($scope.details);
         })
     })
@@ -82,7 +84,9 @@ angular.module('starter.controllers', [])
         }
 
         Friends.details($stateParams.itemLink, function (data) {
+            $scope.isDetailsMovieAvailable = false;
             $scope.details = transform_date_details(data);
+            $scope.isDetailsMovieAvailable = true;
             console.debug($scope.details);
         })
     });

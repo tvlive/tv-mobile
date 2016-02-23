@@ -1,96 +1,98 @@
 <ion-view>
     <ion-nav-buttons side="left">
         <!--<button class="button back-button buttons button-clear header-item" ng-click="goBack()">-->
-            <!--<i class="icon ion-ios-arrow-back"> Back</i>-->
+        <!--<i class="icon ion-ios-arrow-back"> Back</i>-->
         <!--</button>-->
-        <button class="button back-button-details next"  ng-click="goBack()">
+        <button class="button back-button-details next" ng-click="goBack()">
             <i class="icon ion-ios-arrow-back">Back</i>
         </button>
     </ion-nav-buttons>
     <ion-content class="test-details">
-        <div class="row">
-            <div class="col col-100">
-                <div class="content-title">
-                    <p class="details-elemnts">{{details.film.title}} <span
-                            ng-show="details.film.year">({{details.film.year}})</span></p>
-                </div>
-                <div class="rating" ng-show="details.rating">
-                    <i class="star-rating icon ion-star"></i><span class="number-rating">{{details.rating}}</span>
-                </div>
-            </div>
-        </div>
-        <div ng-show="details.film.poster">
+        <div class="ng-hide" ng-show="isDetailsMovieAvailable ">
             <div class="row">
-                <div class="col col-20"></div>
-                <div class="col col-60">
-                    <div class="item item-image">
-                        <img ng-src="{{details.film.poster}}">
+                <div class="col col-100">
+                    <div class="content-title">
+                        <p class="details-elemnts">{{details.film.title}} <span
+                                ng-show="details.film.year">({{details.film.year}})</span></p>
+                    </div>
+                    <div class="rating" ng-show="details.rating">
+                        <i class="star-rating icon ion-star"></i><span class="number-rating">{{details.rating}}</span>
                     </div>
                 </div>
-                <div class="col col-20"></div>
-                <!--<div class="col col-70">-->
-                <!--<div class="row">-->
-                <!--<div class="col col-100">-->
-                <!--<div>-->
-                <!--<p>{{details.series.plot}}</p>-->
-                <!--</div>-->
-                <!--</div>-->
-                <!--</div>-->
-                <!--</div>-->
             </div>
-        </div>
-
-        <div>
-            <div class="row" ng-show="details.film.plot">
-                <div class="col col-100">
-                    <p class="black-content">Plot</p>
-
-                    <p>{{details.film.plot}}</p>
+            <div ng-show="details.film.poster">
+                <div class="row">
+                    <div class="col col-20"></div>
+                    <div class="col col-60">
+                        <div class="item item-image">
+                            <img ng-src="{{details.film.poster}}">
+                        </div>
+                    </div>
+                    <div class="col col-20"></div>
+                    <!--<div class="col col-70">-->
+                    <!--<div class="row">-->
+                    <!--<div class="col col-100">-->
+                    <!--<div>-->
+                    <!--<p>{{details.series.plot}}</p>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--</div>-->
                 </div>
             </div>
-            <div class="row" ng-show="details.film.genre.length">
-                <div class="col col-100">
-                    <p class="black-content">Categories</p>
 
-                    <p><span class="array-element" ng-repeat="genre in details.film.genre">
+            <div>
+                <div class="row" ng-show="details.film.plot">
+                    <div class="col col-100">
+                        <p class="black-content">Plot</p>
+
+                        <p>{{details.film.plot}}</p>
+                    </div>
+                </div>
+                <div class="row" ng-show="details.film.genre.length">
+                    <div class="col col-100">
+                        <p class="black-content">Categories</p>
+
+                        <p><span class="array-element" ng-repeat="genre in details.film.genre">
                         {{genre}}
                     </span>
-                    </p>
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="row" ng-show="details.film.actors.length">
-                <div class="col col-100">
-                    <p class="black-content">Cast</p>
+                <div class="row" ng-show="details.film.actors.length">
+                    <div class="col col-100">
+                        <p class="black-content">Cast</p>
 
-                    <p><span class="array-element" ng-repeat="actor in details.film.actors">
+                        <p><span class="array-element" ng-repeat="actor in details.film.actors">
                         {{actor}}
                     </span>
-                    </p>
+                        </p>
+                    </div>
+
                 </div>
+                <div class="row" ng-show="details.film.director.length">
+                    <div class="col col-100">
+                        <p class="black-content">Director</p>
 
-            </div>
-            <div class="row" ng-show="details.film.director.length">
-                <div class="col col-100">
-                    <p class="black-content">Director</p>
-
-                    <p><span class="array-element" ng-repeat="director in details.film.director">
+                        <p><span class="array-element" ng-repeat="director in details.film.director">
                         {{director}}
                     </span>
-                    </p>
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div class="row" ng-show="details.film.language">
-                <div class="col col-100">
-                    <p class="black-content">Language</p>
+                <div class="row" ng-show="details.film.language">
+                    <div class="col col-100">
+                        <p class="black-content">Language</p>
 
-                    <p>{{details.film.language}}</p>
+                        <p>{{details.film.language}}</p>
+                    </div>
                 </div>
-            </div>
-            <div class="row" ng-show="details.film.awards">
-                <div class="col col-100">
-                    <p class="black-content">Awards</p>
+                <div class="row" ng-show="details.film.awards">
+                    <div class="col col-100">
+                        <p class="black-content">Awards</p>
 
-                    <p>{{details.film.awards}}</p>
+                        <p>{{details.film.awards}}</p>
+                    </div>
                 </div>
             </div>
         </div>
