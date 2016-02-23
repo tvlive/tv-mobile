@@ -5,6 +5,7 @@ angular.module('starter.controllers', [])
         $scope.series_now = true;
 
         $scope.toDetails = function (item) {
+            $scope.loadingDetailsSeries = false;
             $state.go('series-details', {itemLink: item.uriTVContentDetails});
         }
 
@@ -36,6 +37,7 @@ angular.module('starter.controllers', [])
         $scope.movies_now = true;
 
         $scope.toDetails = function (item) {
+            $scope.loadingDetailsMovies = false;
             $state.go('movies-details', {itemLink: item.uriTVContentDetails});
         }
 
@@ -69,9 +71,14 @@ angular.module('starter.controllers', [])
             $ionicHistory.goBack();
         }
 
+        $scope.loadingDetailsSeries = false
+
         Friends.details($stateParams.itemLink, function (data) {
+            //console.debug($scope.loadingDetailsSeries)
             $scope.details = transform_date_details(data);
-            console.debug($scope.details);
+            //console.debug($scope.details);
+            $scope.loadingDetailsSeries = true;
+            //console.debug($scope.loadingDetailsSeries)
         })
     })
 
@@ -81,8 +88,14 @@ angular.module('starter.controllers', [])
             $ionicHistory.goBack();
         }
 
+        $scope.loadingDetailsMovies = false
+
         Friends.details($stateParams.itemLink, function (data) {
+            //console.debug($scope.loadingDetailsMovies)
             $scope.details = transform_date_details(data);
-            console.debug($scope.details);
+            //console.debug($scope.details);
+            $scope.loadingDetailsMovies = true;
+            //console.debug($scope.loadingDetailsMovies)
+
         })
     });
