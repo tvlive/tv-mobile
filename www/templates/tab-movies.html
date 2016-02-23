@@ -9,73 +9,45 @@
     </ion-header-bar>
     <ion-content>
         <ion-list>
-            <ion-item class="dotte item-remove-animate cage" ng-repeat="chat in movies" type="item-text-wrap">
-
+            <ion-item class="dotte item-remove-animate cage" ng-repeat="chat in movies" type="item-text-wrap"
+                      ng-click="toDetails({{chat}})">
                 <div class="row">
                     <div class="col col-100">
                         <div class="content-title">
                             <p>{{chat.title}}</p>
                         </div>
-                    </div>
-                </div>
-
-                <div ng-show="chat.poster">
-                    <div class="row">
-                        <div class="col col-30">
-                            <div class="item item-image">
-                                <img ng-src="{{chat.poster}}">
-                            </div>
-                            <div ng-show="chat.rating">
-                                <i class="star-rating icon ion-star item-icon-left"></i><span class="number-rating">{{chat.rating}}</span>
-                            </div>
-                        </div>
-                        <div class="col col-70">
-                            <div class="row">
-                                <div class="col col-20">
-                                </div>
-                                <div class="col col-80">
-                                    <div class="item item-image">
-                                        <img ng-src="{{chat.channelImageURL}}">
-                                    </div>
-                                    <div ng-show="chat.onTimeNow">
-                                        <progress max="100" value="{{chat.perCentTimeElapsed}}"></progress>
-                                    </div>
-                                    <p class="time">{{chat.st}} - {{chat.et}}</p>
-                                </div>
-                            </div>
+                        <div class="rating" ng-show="chat.rating">
+                            <i class="star-rating icon ion-star"></i><span class="number-rating">{{chat.rating}}</span>
                         </div>
                     </div>
                 </div>
 
-
-                <div ng-show="chat.noPoster">
-
-                    <div class="row">
-                        <div class="col col-30">
-                            <div class="item item-image">
-                                <img ng-src="{{chat.image}}">
-                            </div>
-                            <div ng-show="chat.rating">
-                                <i class="star-rating icon ion-star item-icon-left"></i><span class="number-rating">{{chat.rating}}</span>
-                            </div>
+                <div class="row">
+                    <div class="col col-30">
+                        <div ng-show="chat.poster" class="item item-image">
+                            <img ng-src="{{chat.poster}}">
                         </div>
-                        <div class="col col-70">
-                            <div class="row">
-                                <div class="col col-20">
+                        <div ng-show="chat.noPoster" class="item item-image">
+                            <img ng-src="{{chat.image}}">
+                        </div>
+                    </div>
+                    <div class="col col-70">
+                        <div class="row">
+                            <div class="col col-20">
+                            </div>
+                            <div class="col col-80">
+                                <div class="item item-image">
+                                    <img ng-src="{{chat.channelImageURL}}">
                                 </div>
-                                <div class="col col-80">
-                                    <div class="item item-image">
-                                        <img ng-src="{{chat.channelImageURL}}">
-                                    </div>
-                                    <div ng-show="chat.onTimeNow">
-                                        <progress max="100" value="{{chat.perCentTimeElapsed}}"></progress>
-                                    </div>
-                                    <p class="time">{{chat.st}} - {{chat.et}}</p>
+                                <div ng-show="chat.onTimeNow">
+                                    <progress max="100" value="{{chat.perCentTimeElapsed}}"></progress>
                                 </div>
+                                <p class="time">{{chat.st}} - {{chat.et}}</p>
                             </div>
                         </div>
                     </div>
                 </div>
+
 
             </ion-item>
         </ion-list>

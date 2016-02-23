@@ -1,8 +1,12 @@
 angular.module('starter.controllers', [])
 
-    .controller('SeriesCtrl', function ($scope, $stateParams, Friends) {
+    .controller('SeriesCtrl', function ($scope, $state, Friends) {
 
         $scope.series_now = true;
+
+        $scope.toDetails = function (item) {
+            $state.go('series-details', {itemLink: item.uriTVContentDetails});
+        }
 
         $scope.showNext = function () {
             if ($scope.series_now) {
@@ -16,7 +20,7 @@ angular.module('starter.controllers', [])
 
         $scope.showNow = function () {
             if (!$scope.series_now) {
-                $scope.series_now = true
+                $scope.series_now = true;
                 Friends.series(function (data) {
                     $scope.series = transform_content(data);
                 })
@@ -28,9 +32,12 @@ angular.module('starter.controllers', [])
         })
     })
 
-    .controller('MoviesCtrl', function ($scope, $stateParams, Friends) {
-
+    .controller('MoviesCtrl', function ($scope, $state, Friends) {
         $scope.movies_now = true;
+
+        $scope.toDetails = function (item) {
+            $state.go('movies-details', {itemLink: item.uriTVContentDetails});
+        }
 
         $scope.showNext = function () {
             if ($scope.movies_now) {
@@ -44,7 +51,7 @@ angular.module('starter.controllers', [])
 
         $scope.showNow = function () {
             if (!$scope.movies_now) {
-                $scope.movies_now = true
+                $scope.movies_now = true;
                 Friends.movies(function (data) {
                     $scope.movies = transform_content(data);
                 })
@@ -53,5 +60,29 @@ angular.module('starter.controllers', [])
 
         Friends.movies(function (data) {
             $scope.movies = transform_content(data);
+        })
+    })
+
+    .controller('SeriesDetailsCtrl', function ($scope, $ionicHistory, $stateParams, Friends) {
+
+        $scope.goBack = function () {
+            $ionicHistory.goBack();
+        }
+
+        Friends.details($stateParams.itemLink, function (data) {
+            $scope.details = transform_date_details(data);
+            console.debug($scope.details);
+        })
+    })
+
+    .controller('MoviesDetailsCtrl', function ($scope, $ionicHistory, $stateParams, Friends) {
+
+        $scope.goBack = function () {
+            $ionicHistory.goBack();
+        }
+
+        Friends.details($stateParams.itemLink, function (data) {
+            $scope.details = transform_date_details(data);
+            console.debug($scope.details);
         })
     });
