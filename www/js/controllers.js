@@ -82,9 +82,11 @@ angular.module('starter.controllers', [])
         $scope.goBack = function () {
             $ionicHistory.goBack();
         }
-
+        
+        $scope.isDetailsMovieAvailable = false;
+        console.debug($scope.isDetailsMovieAvailable);
         Friends.details($stateParams.itemLink, function (data) {
-            $scope.isDetailsMovieAvailable = false;
+            
             $scope.details = transform_date_details(data);
             $scope.isDetailsMovieAvailable = true;
             console.debug($scope.details);
