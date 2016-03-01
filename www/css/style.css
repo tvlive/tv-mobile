@@ -23,7 +23,7 @@ p.time  {
 	background-color: black;
 	border-top-width: 0px;
 	border-bottom-color: #EA4646;
-	border-bottom-width: thick;
+	border-bottom-width: 2px;
 }
 
 .rating {
@@ -80,7 +80,7 @@ p.time  {
 
 div.content-title {
 	text-align: center;
-	font-size: small;
+	font-size: larger;
 	color: white;
 }
 
@@ -120,4 +120,25 @@ span.array-element {
 
 p.details-elemnts {
 	margin: 0px;
+}
+
+.image-container {
+	/*border: dotted;*/
+	/*width: 200px;*/
+	/*height: 300px;*/
+}
+
+.image-container div.item.item-image.channel {
+	width: 25px;
+	height: 27px;
+	background: transparent;
+	border: none;
+	top: -18px;
+	left: 0;
+}
+
+.movie {
+	padding: 0px;
+	height: 170px;
+	/*margin: 0px;*/
 }
