@@ -1,144 +1,161 @@
 /* Empty. Add your own CSS if you like */
 .item p {
-	text-align: center;
-	font-size: small;
-	color: white;
+    text-align: center;
+    font-size: small;
+    color: white;
 }
 
-p.time  {
-	text-align: center;
-	font-size: x-small;
+p.time {
+    text-align: center;
+    font-size: x-small;
 }
 
 .tabs {
-	background-color: #f8f8f8;
-	color: #EA4646;
-}
-.bar.bar-stable{
-	background-color: black !important;
+    background-color: #f8f8f8;
+    color: #EA4646;
 }
 
+.bar.bar-stable {
+    background-color: #1F1D1D !important;
+}
 
 .cage.item {
-	background-color: black;
-	border-top-width: 0px;
-	border-bottom-color: #EA4646;
-	border-bottom-width: 2px;
+    background-color: #1F1D1D;
+    border-top-width: 0px;
+    border-bottom-color: #EA4646;
+    border-bottom-width: 2px;
 }
 
-.rating {
-	text-align: center;
-}
+/*.rating {*/
+/*/!*text-align: center;*!/*/
+/*}*/
 .number-rating {
-	color: white;
-	font-size: small;
+    color: white;
+    font-size: small;
+    text-align: left;
+    /*border-right: solid;*/
+    /*border-color: #EA4646 !important;*/
+    /*margin-right: 10px;*/
+    /*padding-right: 5px;*/
+    /*border-right-width: 2px;*/
+    /*border-right-color: #EA4646;*/
+}
+
+.time-left {
+
+    border-left: solid;
+    border-left-width: 1px;
+    border-right: solid;
+    border-right-width: 1px;
+    border-color: #EA4646;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: white;
+    font-size: small;
+    text-align: left;
+    /*border: dashed;*/
 }
 
 .star-rating {
-	color: #ffc900;
+    color: #ffc900;
 }
 
 .button.button.now {
-	background-color: #EA4646;
-	border-color: #EA4646;
-	color: white;
-	font-size: medium;
+    background-color: #EA4646;
+    border-color: #EA4646;
+    color: #1F1D1D;
+    font-size: medium;
 }
 
 .button.button.next {
-	background-color: black;
-	border-color: #EA4646;
-	color: white;
-	font-size: medium;
+    background-color: #1F1D1D;
+    border-color: #EA4646;
+    color: #EA4646;
+    font-size: medium;
 }
 
-.search-bar
-{
-	width:50% !important;
-	background: inherit;
+.search-bar {
+    width: 50% !important;
+    background: inherit;
 }
 
-.bar .bar-black{
-	background-color: black;
+.bar .bar-black {
+    background-color: #1F1D1D;
 }
 
 .bar-header.black-header {
-	background-color: black !important;
-	border-bottom-width: 10px !important;
-	border-bottom: dotted !important;
-	background-size: 0px !important;
+    background-color: #1F1D1D !important;
+    border-bottom-width: 10px !important;
+    background-size: 0px !important;
 }
 
 .test-details {
-	background-color: black;
-	border-top-width: 0px;
-	border-bottom-color: #EA4646;
-	border-bottom-width: thick;
-	color: white;
-	font-size: small;
+    background-color: #1F1D1D;
+    border-top-width: 0px;
+    border-bottom-color: #EA4646;
+    border-bottom-width: thick;
+    color: white;
+    font-size: small;
 }
 
 div.content-title {
-	text-align: center;
-	font-size: larger;
-	color: white;
+    text-align: center;
+    font-size: larger;
+    color: white;
 }
 
-p.black-content{
-	background-color: #EA4646;
-	border-color: #EA4646;
-	color: white;
-	font-size: small;
-	text-align: center;
+p.black-content {
+    background-color: #EA4646;
+    border-color: #EA4646;
+    color: white;
+    font-size: small;
+    text-align: center;
 }
 
 .number-rating-details {
-	font-size: medium;
-	color: white;
+    font-size: medium;
+    color: white;
 }
 
 span.array-element {
-	border-left: solid;
-	border-left-width: 1px;
-	border-right: solid;
-	border-right-width: 1px;
-	border-color: #EA4646;
-	padding-left: 5px;
-	padding-right: 5px;
-
+    border-left: solid;
+    border-left-width: 1px;
+    border-right: solid;
+    border-right-width: 1px;
+    border-color: #EA4646;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
-
-.back-button-details
-{
-	background: inherit;
-	background-color: black;
-	border-width: 0px;
-	/*border-color: #EA4646;*/
-	color: white;
+.back-button-details {
+    background: inherit;
+    background-color: #1F1D1D;
+    border-width: 0px;
+    /*border-color: #EA4646;*/
+    color: white;
 }
 
 p.details-elemnts {
-	margin: 0px;
+    margin: 0px;
 }
 
-.image-container {
-	/*border: dotted;*/
-	/*width: 200px;*/
-	/*height: 300px;*/
-}
+/*.image-container {*/
+/*/!*border: dotted;*!/*/
+/*/!*width: 200px;*!/*/
+/*/!*height: 300px;*!/*/
+/*}*/
 
-.image-container div.item.item-image.channel {
-	width: 25px;
-	height: 27px;
-	background: transparent;
-	border: none;
-	top: -18px;
-	left: 0;
-}
+/*.image-container div.item.item-image.channel {*/
+/*width: 25px;*/
+/*height: 27px;*/
+/*background: transparent;*/
+/*border: none;*/
+/*top: -18px;*/
+/*left: 0;*/
+/*}*/
 
-.movie {
-	padding: 0px;
-	height: 170px;
-	/*margin: 0px;*/
-}
+/*.movie {*/
+/*padding: 0px;*/
+/*height: 170px;*/
+/*/!*margin: 0px;*!/*/
+/*}*/

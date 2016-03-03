@@ -28,26 +28,31 @@
                             <div ng-show="chat.poster" class="item item-image">
                                 <img ng-src="{{chat.poster}}">
                             </div>
-                            <div class="item item-image channel">
-                                <img ng-src="{{chat.channelImageURL}}">
-                            </div>
                         </div>
                     </div>
                     <div class="col col-75">
                         <div class="row">
-                            <div class="col col-100">
+                            <div class="col col-80">
                                 <div>
                                     <div>
-                                        <p>{{chat.title}}</p>
+                                        <p style="text-align: left;font-size: large">{{chat.title}}</p>
                                     </div>
-                                    <div class="rating" ng-show="chat.rating">
+                                    <div  ng-show="chat.rating">
                                         <i class="star-rating icon ion-star"></i><span class="number-rating">{{chat.rating}}</span>
+                                        <span class="time-left" ng-show="chat.onTimeNow">45 minutes left</span>
+                                        <span class="time-left" ng-show="!chat.onTimeNow" class="time">{{chat.st}} - {{chat.et}}</span>
                                     </div>
                                 </div>
-                                <div ng-show="chat.onTimeNow">
-                                    <progress max="100" value="{{chat.perCentTimeElapsed}}"></progress>
+                                <!--<div ng-show="chat.onTimeNow">-->
+                                    <!--<progress max="100" value="{{chat.perCentTimeElapsed}}"></progress>-->
+                                    <!--<p ng-show="chat.onTimeNow">45 minutes left</p>-->
+                                <!--</div>-->
+
+                            </div>
+                            <div class="col col-20">
+                                <div class="item item-image">
+                                    <img ng-src="{{chat.channelImageURL}}">
                                 </div>
-                                <p class="time">{{chat.st}} - {{chat.et}}</p>
                             </div>
                         </div>
                     </div>

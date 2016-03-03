@@ -33,33 +33,43 @@
                             <div ng-show="chat.poster" class="item item-image">
                                 <img ng-src="{{chat.poster}}">
                             </div>
-                            <div ng-show="chat.noPoster" class="item item-image">
-                                <img ng-src="{{chat.image}}">
-                            </div>
-                            <div class="item item-image channel">
-                                <img ng-src="{{chat.channelImageURL}}">
-                            </div>
+                            <!--<div ng-show="chat.noPoster" class="item item-image">-->
+                            <!--<img ng-src="{{chat.image}}">-->
+                            <!--</div>-->
+                            <!--<div class="item item-image channel">-->
+                            <!--<img ng-src="{{chat.channelImageURL}}">-->
+                            <!--</div>-->
                         </div>
                     </div>
                     <div class="col col-75">
                         <div class="row">
-                            <div class="col col-100">
-                                <div class="content-title">
-                                    <p>{{chat.title}}</p>
-                                    <p ng-show="chat.episodeTitle">{{chat.episodeTitle}}</p>
-                                    <p>Episode {{chat.episodeNumber}} Season {{chat.seasonNumber}}</p>
+                            <div class="col col-80">
+                                <!--<div class="content-title">-->
+                                <div>
+                                    <p style="text-align: left;font-size: large">{{chat.title}}</p>
+                                    <p style="text-align: left;font-size: medium" ng-show="chat.episodeTitle">{{chat.episodeTitle}}</p>
+                                    <p style="text-align: left;font-size: medium">Episode {{chat.episodeNumber}} Season {{chat.seasonNumber}}</p>
                                 </div>
-                                <div class="rating" ng-show="chat.rating">
-                                    <i class="star-rating icon ion-star"></i><span
-                                        class="number-rating">{{chat.rating}}</span>
+                                <div  ng-show="chat.rating">
+                                    <i class="star-rating icon ion-star"></i><span class="number-rating">{{chat.rating}}</span>
+                                    <span class="time-left" ng-show="chat.onTimeNow">45 minutes left</span>
+                                    <span class="time-left" ng-show="!chat.onTimeNow" class="time">{{chat.st}} - {{chat.et}}</span>
                                 </div>
-                                <div ng-show="chat.onTimeNow">
-                                    <progress max="100" value="{{chat.perCentTimeElapsed}}"></progress>
-                                </div>
-                                <p class="time">{{chat.st}} - {{chat.et}}</p>
+                                <!--<div class="rating" ng-show="chat.rating">-->
+                                    <!--<i class="star-rating icon ion-star"></i><span-->
+                                        <!--class="number-rating">{{chat.rating}}</span>-->
+                                <!--</div>-->
+                                <!--<div ng-show="chat.onTimeNow">-->
+                                    <!--<progress max="100" value="{{chat.perCentTimeElapsed}}"></progress>-->
+                                <!--</div>-->
+                                <!--<p class="time">{{chat.st}} - {{chat.et}}</p>-->
                             </div>
 
-
+                            <div class="col col-20">
+                                <div class="item item-image">
+                                    <img ng-src="{{chat.channelImageURL}}">
+                                </div>
+                            </div>
                             <!--<div class="col col-20">-->
                             <!--</div>-->
                             <!--<div class="col col-80">-->
