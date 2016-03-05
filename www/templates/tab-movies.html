@@ -21,7 +21,11 @@
                 <!--</div>-->
                 <!--</div>-->
                 <!--</div>-->
-
+                <div class="row">
+                    <div class="col col-100">
+                        <p style="text-align: left;font-size: large;">{{chat.title}}</p>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col col-25">
                         <div class="image-container">
@@ -34,12 +38,13 @@
                         <div class="row">
                             <div class="col col-80">
                                 <div style="position: relative; top: -10px">
+                                    <!--<div>-->
+                                    <!--<p style="text-align: left;font-size: large">{{chat.title}}</p>-->
+                                    <!--</div>-->
                                     <div>
-                                        <p style="text-align: left;font-size: large">{{chat.title}}</p>
-                                    </div>
-                                    <div ng-show="chat.rating">
-                                        <i class="star-rating icon ion-star"></i><span
-                                            class="number-rating">{{chat.rating}}</span>
+                                        <i class="star-rating icon ion-star"></i>
+                                        <span ng-show="chat.rating" class="number-rating">{{chat.rating}}</span>
+                                        <span ng-show="!chat.rating" class="number-rating">N/A</span>
                                         <span class="time-left" ng-show="chat.onTimeNow">45 minutes left</span>
                                         <span class="time-left" ng-show="!chat.onTimeNow" class="time">{{chat.st}} - {{chat.et}}</span>
                                     </div>
@@ -51,7 +56,8 @@
 
                             </div>
                             <div class="col col-20">
-                                <div class="item item-image" style="background-color: #1F1D1D; border: none;position: relative; right: -20px;bottom: -15px">
+                                <div class="item item-image"
+                                     style="background-color: #1F1D1D; border: none;position: relative; right: -20px;bottom: 10px">
                                     <img ng-src="{{chat.channelImageURL}}">
                                 </div>
                             </div>

@@ -154,8 +154,9 @@ p.details-elemnts {
 /*left: 0;*/
 /*}*/
 
-/*.movie {*/
-/*padding: 0px;*/
+.movie {
+padding-top: 0px;
+padding-bottom: 0px;
 /*height: 170px;*/
-/*/!*margin: 0px;*!/*/
-/*}*/
+/*margin: 0px;*/
+}

@@ -9,7 +9,7 @@
     </ion-header-bar>
     <ion-content>
         <ion-list>
-            <ion-item class="item-remove-animate cage" ng-repeat="chat in series" type="item-text-wrap"
+            <ion-item class="item-remove-animate cage movie" ng-repeat="chat in series" type="item-text-wrap"
                       ng-click="toDetails({{chat}})">
 
                 <!--<div class="row">-->
@@ -27,6 +27,11 @@
                 <!--</div>-->
                 <!--</div>-->
                 <!--</div>-->
+                <div class="row">
+                    <div class="col col-100">
+                        <p style="text-align: left;font-size: large;">{{chat.title}}</p>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col col-25">
                         <div class="image-container">
@@ -47,13 +52,15 @@
                                 <!--<div class="content-title">-->
                                 <div style="position: relative; top: -10px">
                                     <div>
-                                        <p style="text-align: left;font-size: large">{{chat.title}}</p>
+                                        <!--<p style="text-align: left;font-size: large">{{chat.title}}</p>-->
                                         <!--<p style="text-align: left;font-size: medium" ng-show="chat.episodeTitle">{{chat.episodeTitle}}</p>-->
                                         <p style="text-align: left;font-size: medium">Episode {{chat.episodeNumber}}
                                             Season {{chat.seasonNumber}}</p>
                                     </div>
-                                    <div ng-show="chat.rating">
-                                        <i class="star-rating icon ion-star"></i><span class="number-rating">{{chat.rating}}</span>
+                                    <div>
+                                        <i class="star-rating icon ion-star"></i>
+                                        <span ng-show="chat.rating" class="number-rating">{{chat.rating}}</span>
+                                        <span ng-show="!chat.rating" class="number-rating">N/A</span>
                                         <span class="time-left" ng-show="chat.onTimeNow">45 minutes left</span>
                                         <span class="time-left" ng-show="!chat.onTimeNow" class="time">{{chat.st}} - {{chat.et}}</span>
                                     </div>
@@ -69,7 +76,9 @@
                             </div>
 
                             <div class="col col-20">
-                                <div class="item item-image" style="background-color: #1F1D1D; border: none;position: relative; right: -20px">                                    <img ng-src="{{chat.channelImageURL}}">
+                                <div class="item item-image"
+                                     style="background-color: #1F1D1D; border: none;position: relative; right: -20px;bottom: 10px">
+                                <img ng-src="{{chat.channelImageURL}}">
                                 </div>
                             </div>
                             <!--<div class="col col-20">-->
