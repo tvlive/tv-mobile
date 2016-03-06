@@ -73,6 +73,11 @@
                         <!--The aliens are coming and their goal is to invade and destroy Earth. Fighting superior technology, mankind's best weapon is the will to survive.                                &lt;!&ndash;</div>&ndash;&gt;-->
                         <!--</div>-->
                         <!--</div>-->
+                        <div class="row" style="position: relative; top:-10px">
+                            <div ng-show="chat.plot" ngMaxlength="10" class="col col-100 item-text-wrap" style="color: white;font-size: small">
+                                {{chat.plot | limitTo:100}}...
+                            </div>
+                        </div>
                     </div>
                 </div>
             </ion-item>

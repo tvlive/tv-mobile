@@ -18,6 +18,7 @@ function transform_content(data) {
         data[i].episodeTitle =  data[i].series.episode.episodeTitle;
         data[i].episodeNumber =  data[i].series.episode.episodeNumber;
         data[i].seasonNumber =  data[i].series.episode.seasonNumber;
+        data[i].plot =  data[i].series.plot;
 
       }
       if (data[i].film){
@@ -28,6 +29,7 @@ function transform_content(data) {
           data[i].noPoster = true;
         }
         data[i].title = data[i].film.title;
+        data[i].plot =  data[i].film.plot;
 
       }
 
