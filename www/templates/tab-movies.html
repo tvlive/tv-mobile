@@ -11,17 +11,6 @@
         <ion-list>
             <ion-item class="dotte item-remove-animate cage movie" ng-repeat="chat in movies" type="item-text-wrap"
                       ng-click="toDetails({{chat}})">
-
-                <!--<div class="row">-->
-                <!--<div class="col col-100">-->
-                <!--<div class="content-title">-->
-                <!--<p>{{chat.title}}</p>-->
-                <!--</div>-->
-                <!--<div class="rating" ng-show="chat.rating">-->
-                <!--<i class="star-rating icon ion-star"></i><span class="number-rating">{{chat.rating}}</span>-->
-                <!--</div>-->
-                <!--</div>-->
-                <!--</div>-->
                 <div class="row">
                     <div class="col col-100">
                         <p style="text-align: left;font-size: large;">{{chat.title}}</p>
@@ -42,9 +31,6 @@
                         <div class="row">
                             <div class="col col-80">
                                 <div style="position: relative; top: -10px">
-                                    <!--<div>-->
-                                    <!--<p style="text-align: left;font-size: large">{{chat.title}}</p>-->
-                                    <!--</div>-->
                                     <div>
                                         <i class="star-rating icon ion-star"></i>
                                         <span ng-show="chat.rating" class="number-rating">{{chat.rating}}</span>
@@ -53,11 +39,6 @@
                                         <span class="time-left" ng-show="!chat.onTimeNow" class="time">{{chat.st}} - {{chat.et}}</span>
                                     </div>
                                 </div>
-                                <!--<div ng-show="chat.onTimeNow">-->
-                                <!--<progress max="100" value="{{chat.perCentTimeElapsed}}"></progress>-->
-                                <!--<p ng-show="chat.onTimeNow">45 minutes left</p>-->
-                                <!--</div>-->
-
                             </div>
                             <div class="col col-20">
                                 <div class="item item-image"
@@ -66,15 +47,9 @@
                                 </div>
                             </div>
                         </div>
-                        <!--<div class="row"-->
-                        <!--style="overflow: visible;white-space: normal;font-size: x-small; position: relative; top: -10px;color: white">-->
-                        <!--<div class="card">-->
-                        <!--<div class="item item-text-wrap">-->
-                        <!--The aliens are coming and their goal is to invade and destroy Earth. Fighting superior technology, mankind's best weapon is the will to survive.                                &lt;!&ndash;</div>&ndash;&gt;-->
-                        <!--</div>-->
-                        <!--</div>-->
                         <div class="row" style="position: relative; top:-10px;width: 290px">
-                            <div ng-show="chat.plot" ngMaxlength="10" class="col col-100 item-text-wrap" style="color: white;font-size: small;">
+                            <div ng-show="chat.plot" ngMaxlength="10" class="col col-100 item-text-wrap"
+                                 style="color: white;font-size: small;">
                                 {{chat.plot | limitTo:100}}...
                             </div>
                         </div>
