@@ -9,8 +9,7 @@
     </ion-header-bar>
     <ion-content>
         <ion-list>
-            <ion-item class="dotte item-remove-animate cage movie" ng-repeat="chat in movies" type="item-text-wrap"
-                      ng-click="toDetails({{chat}})">
+            <ion-item class="dotte item-remove-animate cage movie" ng-repeat="chat in movies" type="item-text-wrap">
                 <div class="row">
                     <div class="col col-100">
                         <p style="text-align: left;font-size: large;">{{chat.title}}</p>
@@ -42,7 +41,7 @@
                             </div>
                             <div class="col col-20">
                                 <div class="item item-image"
-                                     style="background-color: #1F1D1D; border: none;position: relative; right: -20px;bottom: 10px">
+                                     style="background-color: #1F1D1D; border: none;position: relative; right: -30px;bottom: 10px;width: 30px;height: 30px;">
                                     <img ng-src="{{chat.channelImageURL}}">
                                 </div>
                             </div>
