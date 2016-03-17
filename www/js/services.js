@@ -9,7 +9,7 @@ angular.module('starter.services', [])
 
   return {
     movies: function (success_callback) {
-      $http.get('http://api.tvlive.io/tvcontent/film/FREEVIEW/current',
+      $http.get('http://api.tvlive.io/tvcontent/film/SKY%20&%20CABLE/current',
         {
           headers: {'Authorization': 'YWx2YXJvLnZpbGFwbGFuYUBnbWFpbC5jb206NTZhZTdhMjIyYzAwMDAyYzAwMmMzZTBm'
         }
@@ -17,7 +17,7 @@ angular.module('starter.services', [])
       // return content_now;
       },
     moviesNext: function (success_callback) {
-      $http.get('http://api.tvlive.io/tvcontent/film/FREEVIEW/next',
+      $http.get('http://api.tvlive.io/tvcontent/film/SKY%20&%20CABLE/next',
           {
             headers: {'Authorization': 'YWx2YXJvLnZpbGFwbGFuYUBnbWFpbC5jb206NTZhZTdhMjIyYzAwMDAyYzAwMmMzZTBm'
             }
@@ -26,7 +26,7 @@ angular.module('starter.services', [])
     },
 
     series:  function (success_callback) {
-      $http.get('http://api.tvlive.io/tvcontent/series/FREEVIEW/current',
+      $http.get('http://api.tvlive.io/tvcontent/series/SKY%20&%20CABLE/current',
         {
           headers: {'Authorization': 'YWx2YXJvLnZpbGFwbGFuYUBnbWFpbC5jb206NTZhZTdhMjIyYzAwMDAyYzAwMmMzZTBm'
         }
@@ -35,7 +35,7 @@ angular.module('starter.services', [])
       },
 
     seriesNext:  function (success_callback) {
-      $http.get('http://api.tvlive.io/tvcontent/series/FREEVIEW/next',
+      $http.get('http://api.tvlive.io/tvcontent/series/SKY%20&%20CABLE/next',
           {
             headers: {'Authorization': 'YWx2YXJvLnZpbGFwbGFuYUBnbWFpbC5jb206NTZhZTdhMjIyYzAwMDAyYzAwMmMzZTBm'
             }
