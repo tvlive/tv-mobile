@@ -11,7 +11,7 @@ angular.module('starter.services', [])
     movies: function (success_callback) {
       $http.get('http://api.tvlive.io/tvcontent/film/SKY%20&%20CABLE/current',
         {
-          headers: {'Authorization': 'YWx2YXJvLnZpbGFwbGFuYUBnbWFpbC5jb206NTZhZTdhMjIyYzAwMDAyYzAwMmMzZTBm'
+          headers: {'Authorization': 'YWx2YXJvLnZpbGFwbGFuYUBnbWFpbC5jb206NTZlYjM5MWIxODAwMDAxODAwMzlhMThk'
         }
       }).success(success_callback);      
       // return content_now;
@@ -19,7 +19,7 @@ angular.module('starter.services', [])
     moviesNext: function (success_callback) {
       $http.get('http://api.tvlive.io/tvcontent/film/SKY%20&%20CABLE/next',
           {
-            headers: {'Authorization': 'YWx2YXJvLnZpbGFwbGFuYUBnbWFpbC5jb206NTZhZTdhMjIyYzAwMDAyYzAwMmMzZTBm'
+            headers: {'Authorization': 'YWx2YXJvLnZpbGFwbGFuYUBnbWFpbC5jb206NTZlYjM5MWIxODAwMDAxODAwMzlhMThk'
             }
           }).success(success_callback);
       // return content_now;
@@ -28,7 +28,7 @@ angular.module('starter.services', [])
     series:  function (success_callback) {
       $http.get('http://api.tvlive.io/tvcontent/series/SKY%20&%20CABLE/current',
         {
-          headers: {'Authorization': 'YWx2YXJvLnZpbGFwbGFuYUBnbWFpbC5jb206NTZhZTdhMjIyYzAwMDAyYzAwMmMzZTBm'
+          headers: {'Authorization': 'YWx2YXJvLnZpbGFwbGFuYUBnbWFpbC5jb206NTZlYjM5MWIxODAwMDAxODAwMzlhMThk'
         }
       }).success(success_callback);      
       // return content_now;
@@ -37,7 +37,7 @@ angular.module('starter.services', [])
     seriesNext:  function (success_callback) {
       $http.get('http://api.tvlive.io/tvcontent/series/SKY%20&%20CABLE/next',
           {
-            headers: {'Authorization': 'YWx2YXJvLnZpbGFwbGFuYUBnbWFpbC5jb206NTZhZTdhMjIyYzAwMDAyYzAwMmMzZTBm'
+            headers: {'Authorization': 'YWx2YXJvLnZpbGFwbGFuYUBnbWFpbC5jb206NTZlYjM5MWIxODAwMDAxODAwMzlhMThk'
             }
           }).success(success_callback);
       // return content_now;
@@ -45,7 +45,7 @@ angular.module('starter.services', [])
     details:  function (url, success_callback) {
       $http.get(url,
           {
-            headers: {'Authorization': 'YWx2YXJvLnZpbGFwbGFuYUBnbWFpbC5jb206NTZhZTdhMjIyYzAwMDAyYzAwMmMzZTBm'
+            headers: {'Authorization': 'YWx2YXJvLnZpbGFwbGFuYUBnbWFpbC5jb206NTZlYjM5MWIxODAwMDAxODAwMzlhMThk'
             }
           }).success(success_callback);
       // return content_now;
