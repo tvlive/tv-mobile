@@ -8,6 +8,8 @@ function transform_minutes(minutes) {
 function remove_content(channel) {
     if ((channel.indexOf("BBC ONE") > -1 || channel.indexOf("BBC TWO") > -1) && (channel != "BBC ONE" && channel != "BBC TWO")) {
         return true;
+    } else if (channel.indexOf("HD") > -1) {
+        return true;
     } else {
         return false;
     }
