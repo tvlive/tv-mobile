@@ -72,6 +72,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
             })
 
 
+            .state('tab.providers', {
+                url: '/providers',
+                views: {
+                    'tab-providers': {
+                        templateUrl: 'templates/tab-providers.html',
+                        controller: 'ProvidersCtrl'
+                    }
+                }
+            })
+
             .state('tab.series', {
                 url: '/series',
                 views: {
@@ -108,6 +118,14 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
         // if none of the above states are matched, use this as the fallback
         $urlRouterProvider.otherwise('/tab/movies');
+
+    })
+
+    .run(function ($rootScope) {
+        $rootScope.provider = 'FREEVIEW';
+        $rootScope.series_now = true;
+        $rootScope.movies_now = true;
+
 
     });
 

@@ -8,16 +8,18 @@ angular.module('starter.services', [])
 
 
   return {
-    movies: function (success_callback) {
-      $http.get('http://api.tvlive.io/tvcontent/film/SKY%20&%20CABLE/current',
+    movies: function (provider, success_callback) {
+      console.debug(provider);
+      $http.get('http://api.tvlive.io/tvcontent/film/' + provider + '/current',
         {
           headers: {'Authorization': 'YWx2YXJvLnZpbGFwbGFuYUBnbWFpbC5jb206NTZlYjM5MWIxODAwMDAxODAwMzlhMThk'
         }
       }).success(success_callback);      
       // return content_now;
       },
-    moviesNext: function (success_callback) {
-      $http.get('http://api.tvlive.io/tvcontent/film/SKY%20&%20CABLE/next',
+    moviesNext: function (provider, success_callback) {
+      console.debug(provider);
+      $http.get('http://api.tvlive.io/tvcontent/film/'  + provider + '/next',
           {
             headers: {'Authorization': 'YWx2YXJvLnZpbGFwbGFuYUBnbWFpbC5jb206NTZlYjM5MWIxODAwMDAxODAwMzlhMThk'
             }
@@ -25,8 +27,9 @@ angular.module('starter.services', [])
       // return content_now;
     },
 
-    series:  function (success_callback) {
-      $http.get('http://api.tvlive.io/tvcontent/series/SKY%20&%20CABLE/current',
+    series:  function (provider, success_callback) {
+      console.debug(provider);
+      $http.get('http://api.tvlive.io/tvcontent/series/' + provider + '/current',
         {
           headers: {'Authorization': 'YWx2YXJvLnZpbGFwbGFuYUBnbWFpbC5jb206NTZlYjM5MWIxODAwMDAxODAwMzlhMThk'
         }
@@ -34,8 +37,9 @@ angular.module('starter.services', [])
       // return content_now;
       },
 
-    seriesNext:  function (success_callback) {
-      $http.get('http://api.tvlive.io/tvcontent/series/SKY%20&%20CABLE/next',
+    seriesNext:  function (provider, success_callback) {
+      console.debug(provider);
+      $http.get('http://api.tvlive.io/tvcontent/series/'+ provider + '/next',
           {
             headers: {'Authorization': 'YWx2YXJvLnZpbGFwbGFuYUBnbWFpbC5jb206NTZlYjM5MWIxODAwMDAxODAwMzlhMThk'
             }

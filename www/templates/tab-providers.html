@@ -1,0 +1,19 @@
+<ion-view title="" hide-nav-bar="true">
+    <!--<ion-header-bar class="black-header">-->
+    <!--<button class="button search-bar" ng-class="{ now: movies_now, next: !movies_now }" ng-click="showNow()">-->
+    <!--On now-->
+    <!--</button>-->
+    <!--<button class="button search-bar" ng-class="{ next: movies_now, now: !movies_now }" ng-click="showNext()">-->
+    <!--What's next-->
+    <!--</button>-->
+    <!--</ion-header-bar>-->
+    <ion-content>
+
+        <ion-radio ng-repeat="item in clientSideList"
+                   ng-value="item.value"
+                   ng-model="data.clientSide"
+                   ng-click="selectProvider()">
+            {{ item.text }}
+        </ion-radio>
+    </ion-content>
+</ion-view>
