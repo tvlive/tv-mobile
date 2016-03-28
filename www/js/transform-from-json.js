@@ -52,8 +52,8 @@ function transform_content(data) {
         e = new Date(data[i].end);
         s.setUTCHours(s.getUTCHours());
         e.setUTCHours(e.getUTCHours());
-        data[i].st = transform_minutes(s.getHours()) + ':' + transform_minutes(s.getMinutes());
-        data[i].et = transform_minutes(e.getHours()) + ':' + transform_minutes(e.getMinutes());
+        data[i].st = transform_minutes(s.getUTCHours()) + ':' + transform_minutes(s.getMinutes());
+        data[i].et = transform_minutes(e.getUTCHours()) + ':' + transform_minutes(e.getMinutes());
 
         data_transformed.push(data[i]);
     }
@@ -65,8 +65,8 @@ function transform_date_details(data) {
     e = new Date(data.end);
     s.setUTCHours(s.getUTCHours());
     e.setUTCHours(e.getUTCHours());
-    data.st = transform_minutes(s.getHours()) + ':' + transform_minutes(s.getMinutes());
-    data.et = transform_minutes(e.getHours()) + ':' + transform_minutes(e.getMinutes());
+    data.st = transform_minutes(s.getUTCHours()) + ':' + transform_minutes(s.getMinutes());
+    data.et = transform_minutes(e.getUTCHours()) + ':' + transform_minutes(e.getMinutes());
 
     return data;
 }
